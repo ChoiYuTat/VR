@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class HandPresence : MonoBehaviour
 {
@@ -24,3 +25,4 @@ public class HandPresence : MonoBehaviour
         Debug.Log(gameObject.name + " " + triggerValue);
         anim.SetFloat("Trigger", triggerValue);
     }
+}
