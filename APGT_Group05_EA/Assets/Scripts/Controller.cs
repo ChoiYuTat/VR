@@ -13,7 +13,6 @@ public class Controller : MonoBehaviour
     public static Controller Instance { get; protected set; }
 
     public Camera MainCamera;
-    public Camera WeaponCamera;
 
     public Transform CameraPosition;
     public Transform WeaponPosition;
@@ -24,9 +23,6 @@ public class Controller : MonoBehaviour
     public float RunningSpeed = 7.0f;
     public float JumpSpeed = 5.0f;
 
-    [Header("Audio")]
-    public AudioClip JumpingAudioCLip;
-    public AudioClip LandingAudioClip;
 
     float m_VerticalSpeed = 0.0f;
     bool m_IsPaused = false;
