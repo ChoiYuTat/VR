@@ -120,7 +120,7 @@ public class Weapon : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Enemy") && collision.relativeVelocity.magnitude < 15)
         {
-            BodyPartScript bp = collision.gameObject.GetComponent<BodyPartScript>();
+            Body bp = collision.gameObject.GetComponent<Body>();
 
             if (!bp.enemy.dead)
                 Instantiate(Shooting.instance.hitParticlePrefab, transform.position, transform.rotation);

@@ -24,10 +24,10 @@ public class BulletMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            BodyPartScript bp = collision.gameObject.GetComponent<BodyPartScript>();
+            Body bp = collision.gameObject.GetComponent<Body>();
 
             //if (!bp.enemy.dead)
-            Instantiate(SuperHotScript.instance.hitParticlePrefab, transform.position, transform.rotation);
+            Instantiate(Shooting.instance.hitParticlePrefab, transform.position, transform.rotation);
 
             bp.HidePartAndReplace();
             bp.enemy.Ragdoll();

@@ -30,8 +30,8 @@ public class Enemy : MonoBehaviour
     public void Ragdoll()
     {
         anim.enabled = false;
-        BodyPartScript[] parts = GetComponentsInChildren<BodyPartScript>();
-        foreach (BodyPartScript bp in parts)
+        Body[] parts = GetComponentsInChildren<Body>();
+        foreach (Body bp in parts)
         {
             bp.rb.isKinematic = false;
             bp.rb.interpolation = RigidbodyInterpolation.Interpolate;
