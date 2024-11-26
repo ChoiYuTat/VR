@@ -3,7 +3,47 @@ guid: c2793cee515982940929e66f5b673baf
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _0038_Orange
+    second: {fileID: 2100000, guid: 39f6ce44240001f4d8fbdc5ef1e5385a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _0045_Goldenrod
+    second: {fileID: 2100000, guid: 62072f7437592b24680e34c51e952411, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _0046_Gold
+    second: {fileID: 2100000, guid: d56b741d1ca19db4aa9f02f41d31a6a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _0110_LightSlateGray
+    second: {fileID: 2100000, guid: 52295094cbd230e4c958775be8c7aaec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _0131_Silver
+    second: {fileID: 2100000, guid: f1efb4cdeca7690428d9ea8744cc2461, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _0133_Gray
+    second: {fileID: 2100000, guid: 312b613315ad618418e4e7963c8042f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: __0132_LightGray_1
+    second: {fileID: 2100000, guid: 5026f716edd75464f97298ecf1d95c50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material
+    second: {fileID: 2100000, guid: d347e5de58c6cb6498b5e4aa42ba8fb6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
