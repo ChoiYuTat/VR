@@ -928,8 +928,8 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
-  leftAttachTransform: {fileID: 937166491}
-  rightAttachTransform: {fileID: 1847256893}
+  leftAttachTransform: {fileID: 2056643749}
+  rightAttachTransform: {fileID: 696271429}
 --- !u!82 &357925141
 AudioSource:
   m_ObjectHideFlags: 0
@@ -943,7 +943,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.4
-  m_Pitch: 1
+  m_Pitch: -0.22
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -1044,15 +1044,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4261305720530468512, guid: 76448ab1ea577f6428d6f4b301419fde, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4261305720530468512, guid: 76448ab1ea577f6428d6f4b301419fde, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4261305720530468512, guid: 76448ab1ea577f6428d6f4b301419fde, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4261305720530468512, guid: 76448ab1ea577f6428d6f4b301419fde, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1060,7 +1060,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4261305720530468512, guid: 76448ab1ea577f6428d6f4b301419fde, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.824
       objectReference: {fileID: 0}
     - target: {fileID: 4261305720530468512, guid: 76448ab1ea577f6428d6f4b301419fde, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1100,15 +1100,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4261305720530468517, guid: 76448ab1ea577f6428d6f4b301419fde, type: 3}
       propertyPath: m_Size.x
-      value: 0.09174664
+      value: 0.09174663
       objectReference: {fileID: 0}
     - target: {fileID: 4261305720530468517, guid: 76448ab1ea577f6428d6f4b301419fde, type: 3}
       propertyPath: m_Size.y
-      value: 0.29771808
+      value: 0.2688052
       objectReference: {fileID: 0}
     - target: {fileID: 4261305720530468517, guid: 76448ab1ea577f6428d6f4b301419fde, type: 3}
       propertyPath: m_Size.z
-      value: 0.4197679
+      value: 0.41976792
       objectReference: {fileID: 0}
     - target: {fileID: 4261305720530468517, guid: 76448ab1ea577f6428d6f4b301419fde, type: 3}
       propertyPath: m_Center.x
@@ -1116,7 +1116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4261305720530468517, guid: 76448ab1ea577f6428d6f4b301419fde, type: 3}
       propertyPath: m_Center.y
-      value: 0.26959395
+      value: 0.27206472
       objectReference: {fileID: 0}
     - target: {fileID: 4261305720530468517, guid: 76448ab1ea577f6428d6f4b301419fde, type: 3}
       propertyPath: m_Center.z
@@ -1150,7 +1150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 696271429}
   m_Layer: 8
-  m_Name: Left Attach Point
+  m_Name: right Attach Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1163,8 +1163,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696271428}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.3868, z: 0.1804}
+  m_LocalRotation: {x: 0.15354736, y: 0.016585259, z: 0.042669494, w: -0.9870803}
+  m_LocalPosition: {x: -0.257, y: 0.258, z: -0.038}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 357925143}
@@ -1864,7 +1864,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2056643749}
   m_Layer: 8
-  m_Name: Right Attach Point
+  m_Name: left Attach Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1877,8 +1877,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056643748}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.161, y: -0.145, z: 0.003}
+  m_LocalRotation: {x: 0.15354736, y: 0.016585259, z: 0.042669494, w: -0.9870803}
+  m_LocalPosition: {x: -0.1497, y: 0.2547, z: -0.0339}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 357925143}
@@ -2107,7 +2107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 109434732395284509, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
       propertyPath: m_TagString
-      value: Left Hand
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 109434732395451457, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2247,15 +2247,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 109434732395451517, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.1387
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 109434732395451517, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 109434732395451517, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.035
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 109434732395451517, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2751,7 +2751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5686134208185362930, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
       propertyPath: m_TagString
-      value: Right Hand
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
@@ -2821,7 +2821,7 @@ GameObject:
   - component: {fileID: 2453902767002877034}
   m_Layer: 0
   m_Name: LeftHand Controller
-  m_TagString: Untagged
+  m_TagString: Left Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3180,7 +3180,7 @@ GameObject:
   - component: {fileID: 2453902767398673697}
   m_Layer: 0
   m_Name: RightHand Controller
-  m_TagString: Untagged
+  m_TagString: Right Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
