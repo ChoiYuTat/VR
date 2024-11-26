@@ -7,8 +7,28 @@ using UnityEngine.SceneManagement;
 public class Mainmenu : MonoBehaviour
 {
     
-    public void GoToSelectmenu()
+    public void GoToEasyMode()
     {
-        SceneManager.LoadScene("select menu");
+        SceneManager.LoadScene("EasyMode");
+    }
+
+    public void GotoNormalMode()
+    {
+        SceneManager.LoadScene("NormalMode");
+    }
+
+    public void GoToHardMode()
+    {
+        SceneManager.LoadScene("HardMode");
+    }
+
+    public void GoToTutorial()
+    {
+        SceneManager.LoadScene("tutorial");
+    }
+
+    public void GameQuit()
+    {
+        Application.Quit();
     }
 }
