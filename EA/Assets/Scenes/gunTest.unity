@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1460,7 +1460,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
@@ -4510,6 +4510,7 @@ GameObject:
   - component: {fileID: 2453902767126507958}
   - component: {fileID: 2453902767126507957}
   - component: {fileID: 2453902767126507956}
+  - component: {fileID: 2453902767126507962}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -4719,6 +4720,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Timeout: 10
   m_XROrigin: {fileID: 0}
+--- !u!114 &2453902767126507962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2453902767126507953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a151c98af571b7148a94e966fe4bd99b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftGrabRay: {fileID: 343747458}
+  rightGrabRay: {fileID: 1824464894}
+  leftDirectGrab: {fileID: 2453902767002877035}
+  rightDirectGrab: {fileID: 2453902767398673698}
 --- !u!1 &2453902767398673696
 GameObject:
   m_ObjectHideFlags: 0
