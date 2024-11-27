@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         SetupRagdoll();
+        localRotationGun = gun.spawnPoint.localRotation;
     }
 
     // Update is called once per frame
