@@ -7,11 +7,14 @@ public class Enemy : MonoBehaviour
 {
     private NavMeshAgent agent;
     public Transform playerTarget;
+    public Transform playerHead;
     public float stopDistance = 5;
 
     private Animator animator;
 
     public FireBulletOnActivate gun;
+
+    private Quaternion localRotationGun;
 
     // Start is called before the first frame update
     void Start()
@@ -58,9 +61,42 @@ public class Enemy : MonoBehaviour
                 rb.AddExplosionForce(1000, hitPosition, 0.3f);
             }
         }
+        ThrowGun();
+        animator.enabled = false;
+        agent.enabled = false;
+        this.enabled = false;
     }
     public void ShootEnemy()
     {
+        Vector3 playerHeadPosition= playerHead.position-Random.Range(0,0.4f)*Vector3.up;
+        gun.spawnPoint.forward= (playerHeadPosition-gun.spawnPoint.position).normalized;
         gun.FireBullet();
     }
+
+    public void ThrowGun()
+    {
+        gun.spawnPoint.localRotation = localRotationGun;
+
+        gun.transform.parent=null;
+        Rigidbody rb = gun.GetComponent<Rigidbody>();
+        rb.velocity = BallisticVelocityVector(gun.transform.position, playerHead.position, 45);
+        rb.angularVelocity = Vector3.zero;
+    }
+
+    Vector3 BallisticVelocityVector(Vector3 source, Vector3 target, float angle)
+    {
+        Vector3 direction = target - source;
+        float h = direction.y;
+        direction.y = 0;
+        float distance = direction.magnitude;
+        float a = angle * Mathf.Deg2Rad;
+        direction.y = distance * Mathf.Tan(a);
+        distance += h / Mathf.Tan(a);
+
+        // calculate velocity
+        float velocity = Mathf.Sqrt(distance * Physics.gravity.magnitude / Mathf.Sin(2 * a));
+        return velocity * direction.normalized;
+    }
+
+ 
 }

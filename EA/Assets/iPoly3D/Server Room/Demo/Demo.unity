@@ -3031,6 +3031,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.0955846
       objectReference: {fileID: 0}
+    - target: {fileID: 4261305720530468517, guid: 76448ab1ea577f6428d6f4b301419fde, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4261305720926998430, guid: 76448ab1ea577f6428d6f4b301419fde, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -12842,7 +12846,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2453902767126507953}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.103, y: 0, z: 0}
+  m_LocalPosition: {x: -6.103, y: 0.902, z: -0.543}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2453902766266707346}
@@ -14392,6 +14396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTarget: {fileID: 2453902767126507954}
+  playerHead: {fileID: 2453902766447469441}
   stopDistance: 5
   gun: {fileID: 357925139}
 --- !u!95 &2810823580277458971
