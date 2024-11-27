@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
 
     private Animator animator;
 
+    public FireBulletOnActivate gun;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,5 +58,9 @@ public class Enemy : MonoBehaviour
                 rb.AddExplosionForce(1000, hitPosition, 0.3f);
             }
         }
+    }
+    public void ShootEnemy()
+    {
+        gun.FireBullet();
     }
 }
