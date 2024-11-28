@@ -253,16 +253,19 @@ namespace SlimUI.ModernMenu{
 			exitMenu.SetActive(false);
 		}
 
-		public void QuitGame(){
-			#if UNITY_EDITOR
+		public void QuitGame()
+		{
+#if UNITY_EDITOR
 				UnityEditor.EditorApplication.isPlaying = false;
-			#else
-				Application.Quit();
-			#endif
+#else
+			Application.Quit();
+#endif
 		}
 
-		// Load Bar synching animation
-		IEnumerator LoadAsynchronously(string sceneName){ // scene name is just the name of the current scene being loaded
+       
+
+        // Load Bar synching animation
+        IEnumerator LoadAsynchronously(string sceneName){ // scene name is just the name of the current scene being loaded
 			AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
 			operation.allowSceneActivation = false;
 			mainCanvas.SetActive(false);
