@@ -25,7 +25,7 @@ public class TimeManager : MonoBehaviour
         float velocityMagnitude = Head.GetVelocityEstimate().magnitude+leftHand.GetVelocityEstimate().magnitude+rightHand.GetVelocityEstimate().magnitude;
 
         Time.timeScale = Mathf.Ceil(minTimeScale+ velocityMagnitude*sensitivity);
-
+        Debug.Log(Time.timeScale);
         Time.fixedDeltaTime = initialFixedDeltaTime*Time.timeScale;
     }
 }

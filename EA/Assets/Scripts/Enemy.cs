@@ -28,10 +28,8 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+       float distance = Vector3.Distance(playerTarget.position, transform.position);
         agent.SetDestination(playerTarget.position);
-
-        float distance = Vector3.Distance(playerTarget.position, transform.position);
         if (distance < stopDistance)
         {
             agent.isStopped = true;
@@ -39,9 +37,12 @@ public class Enemy : MonoBehaviour
         }
         //else
         //{
+        //    agent.isStopped = false;
         //    agent.SetDestination(playerTarget.position);
-        //    animator.SetFloat("Run", 1);
+        //    animator.SetBool("Shoot", false);
         //}
+
+        transform.LookAt(playerTarget);
     }
 
     public void SetupRagdoll()
