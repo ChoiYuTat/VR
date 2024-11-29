@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
         agent.SetDestination(playerTarget.position);
 
         float distance = Vector3.Distance(playerTarget.position, transform.position);
@@ -36,9 +36,12 @@ public class Enemy : MonoBehaviour
         {
             agent.isStopped = true;
             animator.SetBool("Shoot", true);
-            return;
         }
-
+        //else
+        //{
+        //    agent.SetDestination(playerTarget.position);
+        //    animator.SetFloat("Run", 1);
+        //}
     }
 
     public void SetupRagdoll()
