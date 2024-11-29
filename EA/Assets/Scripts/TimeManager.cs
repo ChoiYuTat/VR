@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Valve.VR.InteractionSystem;
 
 public class TimeManager : MonoBehaviour
 {
-    public VelocityEstimator Head;
+    public VelocityEstimator head;
     public VelocityEstimator leftHand;
     public VelocityEstimator rightHand;
 
@@ -13,6 +12,7 @@ public class TimeManager : MonoBehaviour
     public float minTimeScale = 0.05f;
 
     private float initialFixedDeltaTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +22,10 @@ public class TimeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float velocityMagnitude = Head.GetVelocityEstimate().magnitude+leftHand.GetVelocityEstimate().magnitude+rightHand.GetVelocityEstimate().magnitude;
+        float velocityMagnitude = head.GetVelocityEstimate().magnitude + leftHand.GetVelocityEstimate().magnitude + rightHand.GetVelocityEstimate().magnitude;
 
-        Time.timeScale = Mathf.Ceil(minTimeScale+ velocityMagnitude*sensitivity);
-        Debug.Log(Time.timeScale);
-        Time.fixedDeltaTime = initialFixedDeltaTime*Time.timeScale;
+        Time.timeScale = Mathf.Clamp01(minTimeScale + velocityMagnitude * sensitivity);
+
+        Time.fixedDeltaTime = initialFixedDeltaTime * Time.timeScale;
     }
 }
