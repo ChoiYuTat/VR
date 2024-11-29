@@ -98,7 +98,9 @@ public class Enemy : MonoBehaviour
         gun.transform.parent=null;
         Rigidbody rb = gun.GetComponent<Rigidbody>();
         rb.velocity = BallisticVelocityVector(gun.transform.position, playerHead.position, 45);
+        //Debug.Log(gun.transform.position);
         rb.angularVelocity = Vector3.zero;
+        
     }
 
     Vector3 BallisticVelocityVector(Vector3 source, Vector3 target, float angle)
@@ -112,7 +114,8 @@ public class Enemy : MonoBehaviour
         distance += h / Mathf.Tan(a);
 
         // calculate velocity
-        float velocity = Mathf.Sqrt(distance * Physics.gravity.magnitude / Mathf.Sin(2 * a));
+        float velocity = Mathf.Sqrt(Mathf.Abs(distance) * Physics.gravity.magnitude / Mathf.Sin(2 * a));
+        //Debug.Log(velocity);
         return velocity * direction.normalized;
     }
 
