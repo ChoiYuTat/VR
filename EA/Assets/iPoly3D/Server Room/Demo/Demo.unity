@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2641,7 +2641,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.4
-  m_Pitch: -0.22
+  m_Pitch: 0.99
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -13973,7 +13973,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2453902767126507953}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.91, y: 1.25, z: -0.81}
+  m_LocalPosition: {x: -7.99, y: 1.58, z: -1.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2453902766266707346}
@@ -15559,10 +15559,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f063f12259df2245a9261a99f825022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTarget: {fileID: 357925143}
+  playerTarget: {fileID: 2453902767126507954}
   playerHead: {fileID: 2453902766447469441}
-  stopDistance: 1
-  shoot: 0
+  stopDistance: 4.99
   gun: {fileID: 357925139}
 --- !u!95 &2810823580277458971
 Animator:

@@ -11,7 +11,6 @@ public class Enemy : MonoBehaviour
     public float stopDistance = 5;
 
     private Animator animator;
-    public bool shoot;
     public FireBulletOnActivate gun;
 
     private Quaternion localRotationGun;
@@ -19,7 +18,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        shoot = false;
+        
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         SetupRagdoll();
@@ -29,27 +28,15 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //agent.SetDestination(playerTarget.position);
+        
+        agent.SetDestination(playerTarget.position);
 
-        //float distance = Vector3.Distance(playerTarget.position, transform.position);
-        //if (distance < stopDistance)
-        //{
-        //    agent.isStopped = true;
-        //    animator.SetBool("Shoot", true);
-        //}
-        if (!shoot)
+        float distance = Vector3.Distance(playerTarget.position, transform.position);
+        if (distance < stopDistance)
         {
-            if(Vector3.Distance(playerTarget.position, transform.position)> stopDistance)
-            {
-                agent.SetDestination(playerTarget.position);
-                shoot = false;
-            }
-            else
-            {
-                agent.SetDestination(transform.position);
-                shoot = true;
-            }
-            animator.SetBool("Shoot", shoot);
+            agent.isStopped = true;
+            animator.SetBool("Shoot", true);
+            return;
         }
 
     }
