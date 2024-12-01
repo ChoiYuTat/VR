@@ -12,6 +12,7 @@ public class OnCollisionEnterDeath : MonoBehaviour
         if(collision.gameObject.tag == targetTag) 
         {
             enemy.Dead(collision.contacts[0].point);
+            
         }
     }
 }

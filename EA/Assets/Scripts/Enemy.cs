@@ -56,7 +56,7 @@ public class Enemy : MonoBehaviour
 
     public void Dead(Vector3 hitPosition)
     {
-
+        
         foreach (var item in GetComponentsInChildren<Rigidbody>())
         {
             item.isKinematic = false;
@@ -74,6 +74,9 @@ public class Enemy : MonoBehaviour
         animator.enabled = false;
         agent.enabled = false;
         this.enabled = false;
+        Destroy(gameObject);
+
+
     }
     public void ShootEnemy()
     {
@@ -109,6 +112,7 @@ public class Enemy : MonoBehaviour
         //Debug.Log(velocity);
         return velocity * direction.normalized;
     }
-
+    
+    
  
 }

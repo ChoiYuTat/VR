@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class FireBulletOnActivate : MonoBehaviour
 {
     public GameObject bullet;
+    public string targetTag;
     public Transform spawnPoint;
     public float fireSpeed = 20;
     public AudioSource source;
@@ -31,5 +33,22 @@ public class FireBulletOnActivate : MonoBehaviour
         spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
         Destroy(spawnedBullet, 1);
         source.PlayOneShot(clip);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.gameObject.tag == targetTag)
+        {
+            Destroy(bullet);
+
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            SceneManager.LoadScene("");
+        }
     }
 }
