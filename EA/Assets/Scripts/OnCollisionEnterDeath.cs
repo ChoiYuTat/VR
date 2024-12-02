@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class OnCollisionEnterDeath : MonoBehaviour
 {
-    public string targetTag;
+    public string[] targetTags;
     public Enemy enemy;
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == targetTag) 
+        foreach (var tag in targetTags)
         {
-            enemy.Dead(collision.contacts[0].point);
-            
+            if (collision.gameObject.CompareTag(tag))
+            {
+                enemy.Dead(collision.contacts[0].point);
+                return;
+            }
         }
     }
 }

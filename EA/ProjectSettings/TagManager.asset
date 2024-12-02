@@ -8,6 +8,7 @@ TagManager:
   - Right Hand
   - weapon
   - Enemy
+  - bullet
   layers:
   - Default
   - TransparentFX
