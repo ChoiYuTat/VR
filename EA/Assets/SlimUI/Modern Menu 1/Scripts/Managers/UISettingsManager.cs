@@ -64,15 +64,21 @@ namespace SlimUI.ModernMenu{
 			}
 			else
 			{
-				difficultyhardcoretextLINE.gameObject.SetActive(true);
-				difficultynormaltextLINE.gameObject.SetActive(false);
+				if(difficultyhardcoretextLINE != null)
+				{
+                    difficultyhardcoretextLINE.gameObject.SetActive(true);
+                    difficultynormaltextLINE.gameObject.SetActive(false);
+                }
+
 			}
 
 			// check slider values
-			musicSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("MusicVolume");
-			sensitivityXSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("XSensitivity");
-			sensitivityYSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("YSensitivity");
-			mouseSmoothSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("MouseSmoothing");
+			if (false) {
+                musicSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("MusicVolume");
+                sensitivityXSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("XSensitivity");
+                sensitivityYSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("YSensitivity");
+                mouseSmoothSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("MouseSmoothing");
+            }
 
 			// check full screen
 			if(Screen.fullScreen == true){

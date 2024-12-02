@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.UI;
 
 public class FireBulletOnActivate : MonoBehaviour
 {
@@ -12,6 +14,9 @@ public class FireBulletOnActivate : MonoBehaviour
     public float fireSpeed = 20;
     public AudioSource source;
     public AudioClip clip;
+    public Transform head;
+    public float spawnDistance = 2;
+    public GameObject losemenu;
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +53,9 @@ public class FireBulletOnActivate : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            SceneManager.LoadScene("");
+            losemenu.SetActive(!losemenu.activeSelf);
+
+            losemenu.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized * spawnDistance;
         }
     }
 }
